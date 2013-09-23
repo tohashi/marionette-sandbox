@@ -1,0 +1,21 @@
+{
+  "name": "marionette-sandbox",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/t93/marionette-sandbox.git"
+  },
+  "author": "t93",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "71a0613e7014ad10f48df25b743ee5d530acb3d5",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "bower": "~1.2.6"
+  }
+}
