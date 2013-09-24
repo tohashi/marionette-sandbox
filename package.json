@@ -16,6 +16,8 @@
   "gitHead": "71a0613e7014ad10f48df25b743ee5d530acb3d5",
   "devDependencies": {
     "grunt": "~0.4.1",
-    "bower": "~1.2.6"
+    "bower": "~1.2.6",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-connect": "~0.5.0"
   }
 }
