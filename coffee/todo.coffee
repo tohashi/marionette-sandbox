@@ -1,9 +1,21 @@
-app.module 'Todo', (Todo, app) ->
+App.module 'Todo', (Todo, App) ->
+
   Todo.ItemView = Marionette.ItemView.extend
 
     tagName: 'li'
 
-    template: 'todoItemTemplate'
+    template: '#todoItemTemplate'
+
+    modelEvents:
+      'change': 'render'
+
+  Todo.ListView = Marionette.CompositeView.extend
+
+    template: '#todoListTemplate'
+
+    itemView: Todo.ItemView
+
+    itemViewContainer: '#todoList'
 
   Todo.Model = Backbone.Model.extend
 
@@ -17,10 +29,12 @@ app.module 'Todo', (Todo, app) ->
     initialize: ->
       if @isNew() then @set 'createdAt', Date.now()
 
-
   Todo.Collection = Backbone.Collection.extend
 
     model: Todo.Model
 
-    localStorage: new Backbone.LocalStorage 'todoapp'
+    localStorage: new Backbone.LocalStorage 'todoApp'
+
+    comparator: (todo) ->
+      todo.get 'createdAt'
 
