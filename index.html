@@ -14,15 +14,27 @@
     <section id="mainContents"></section>
     <footer></footer>
 
+    <script type="text/html" id="headerTemplate">
+        <h1>Todo list</h1>
+        <input id="titleInput" placeholder="title..." autofocus>
+        <input id="descInput" placeholder="desc..." autofocus>
+        <button type="button" name="addTodo">add</button>
+    </script>
+
     <script type="text/html" id="todoListTemplate">
         <ul id="todoList"></ul>
     </script>
 
     <script type="text/html" id="todoItemTemplate">
-        <%- title %>
+        <h5><%- title %></h5>
+        <div><%- desc %></div>
+        <% if (limit) { %><span><%- limit %></span><% } %>
     </script>
 
+
+
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/layout.js"></script>
     <script type="text/javascript" src="js/todo.js"></script>
 </body>
 </html>
